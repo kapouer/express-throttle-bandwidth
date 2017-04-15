@@ -3,6 +3,8 @@ module.exports = function(bps) {
 		if (bps > 0) {
 			var total = 0;
 			var resume = req.socket.resume;
+
+			// make sure nothing else can resume
 			req.socket.resume = function() {};
 
 			var pulse = setInterval(function() {
@@ -21,7 +23,10 @@ module.exports = function(bps) {
 
 			req.on('end', function() {
 				clearInterval(pulse);
+				// restore resume because socket could be reused
 				req.socket.resume = resume;
+				// future requests need the socket to be flowing
+				req.socket.resume();
 			});
 		}
 
