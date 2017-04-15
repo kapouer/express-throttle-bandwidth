@@ -1,0 +1,24 @@
+{
+  "name": "express-throttle-bandwidth",
+  "version": "1.0.0",
+  "description": "Express middleware to throttle incoming request bandwidth",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kapouer/express-throttle-bandwidth.git"
+  },
+  "keywords": [
+    "express",
+    "throttle",
+    "bandwidth"
+  ],
+  "author": "Jérémy Lal <kapouer@melix.org>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kapouer/express-throttle-bandwidth/issues"
+  },
+  "homepage": "https://github.com/kapouer/express-throttle-bandwidth#readme"
+}
